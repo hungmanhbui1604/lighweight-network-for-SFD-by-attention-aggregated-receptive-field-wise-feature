@@ -15,11 +15,12 @@ def get_training_components(model, config):
     criterion = torch.nn.BCELoss()
     optimizer = torch.optim.SGD(
         model.parameters(),
-        lr=config['LEARNING_RATE'],          # "learning rate of 0.01" 
-        momentum=config['MOMENTUM'],       # "no momentum" 
-        weight_decay=config['WEIGHT_DECAY']    # "no weight decay" 
+        lr=config['LEARNING_RATE'],
+        momentum=config['MOMENTUM'],
+        weight_decay=config['WEIGHT_DECAY']
     )
-    return criterion, optimizer, None
+    scheduler = None
+    return criterion, optimizer, scheduler
 
 def main():
     args = parse_args()

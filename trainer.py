@@ -133,7 +133,7 @@ class BinaryTrainer:
                     'best_val_loss': best_val_loss,
                     'model_state_dict': best_model_state,
                     'optimizer_state_dict': optimizer.state_dict(),
-                    'scheduler_state_dict': scheduler.state_dict()
+                    'scheduler_state_dict': scheduler.state_dict() if scheduler else None
                 }, model_save_path)
 
             # step scheduler
