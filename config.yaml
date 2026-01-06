@@ -1,0 +1,24 @@
+# Dataset Configuration
+TRAIN_SENSOR_PATH: './data/foreground_2015/CrossMatch'
+TEST_SENSOR_PATH: './data/foreground_2015/CrossMatch'
+TRANSFORM_TYPE: 'transform1'
+BATCH_SIZE: 2
+NUM_WORKERS: 4
+VAL_SPLIT: 0.2
+SEED: 42
+
+# Model Configuration
+MODEL_NAME: 'model1'
+MODEL_SAVE_PATH: './checkpoints/model1.pth'
+
+# Training Configuration
+CRITERION_TYPE: 'bce'
+OPTIMIZER_TYPE: 'SGD'
+LEARNING_RATE: 0.01
+MOMENTUM: 0
+WEIGHT_DECAY: 0
+SCHEDULER_TYPE: 'none'
+NUM_EPOCHS: 1
+
+# Results Configuration
+RESULTS_SAVE_PATH: './results/model1.pth'
