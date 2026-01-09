@@ -18,7 +18,7 @@ LEARNING_RATE: 0.01
 MOMENTUM: 0
 WEIGHT_DECAY: 0
 SCHEDULER_TYPE: 'none'
-NUM_EPOCHS: 1
+NUM_EPOCHS: 1500
 
 # Results Configuration
 RESULTS_SAVE_PATH: './results/model1.pth'
