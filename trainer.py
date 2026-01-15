@@ -3,6 +3,7 @@ import os
 import numpy as np
 from tqdm import tqdm
 from metrics import find_optimal_threshold
+import torch.nn.utils as utils
 
 class BinaryTrainer:
     def __init__(self):
@@ -35,6 +36,7 @@ class BinaryTrainer:
             normalized_outputs = (outputs + 1) / 2.0
             loss = criterion(normalized_outputs, labels)
             loss.backward()
+            utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
             optimizer.step()
 
             predicted = (normalized_outputs > train_threshold).long()

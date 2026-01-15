@@ -21,6 +21,12 @@ TEST_SENSOR_PATH:
 python binary_classification.py -c config.yaml
 ```
 
+3. Evaluate a trained model on the test set:
+
+```bash
+python evaluate.py -c config.yaml -ckpt ./checkpoints/model1.pth -o ./results/eval_results.pth --based_on ace
+```
+
 ## Note
 
 Use the foreground dataset to train and test.
